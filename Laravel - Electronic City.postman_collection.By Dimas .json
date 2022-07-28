@@ -1,0 +1,750 @@
+{
+	"info": {
+		"_postman_id": "ace37dc1-6e01-4a4b-bfb3-9eed008e4a69",
+		"name": "Laravel - Electronic City",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7510908"
+	},
+	"item": [
+		{
+			"name": "Karyawan",
+			"item": [
+				{
+					"name": "List Karyawan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/karyawan",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"karyawan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Karyawan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nik",
+									"value": "123496",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "Divya Azkadina",
+									"type": "text"
+								},
+								{
+									"key": "ttl",
+									"value": "1999-04-20",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Palmerah Jakarta Barat",
+									"type": "text"
+								},
+								{
+									"key": "id_jabatan",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/karyawan",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"karyawan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Karyawan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nik",
+									"value": "1122",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "Bambang Yudhoyono",
+									"type": "text"
+								},
+								{
+									"key": "ttl",
+									"value": "1999-04-20",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Palmerah Jakarta Barat",
+									"type": "text"
+								},
+								{
+									"key": "id_jabatan",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/karyawan/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"karyawan",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Karyawan",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nik",
+									"value": "1122",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "Bambang",
+									"type": "text"
+								},
+								{
+									"key": "ttl",
+									"value": "1999-04-20",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Palmerah Jakarta Barat",
+									"type": "text"
+								},
+								{
+									"key": "id_jabatan",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/karyawan/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"karyawan",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jabatan",
+			"item": [
+				{
+					"name": "List Jabatan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/jabatan",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"jabatan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Jabatan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_jabatan",
+									"value": "Supervisor",
+									"type": "text"
+								},
+								{
+									"key": "id_level",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/jabatan",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"jabatan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Jabatan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_jabatan",
+									"value": "BOD",
+									"type": "text"
+								},
+								{
+									"key": "id_level",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/jabatan/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"jabatan",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Jabatan",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nik",
+									"value": "1122",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "Bambang",
+									"type": "text"
+								},
+								{
+									"key": "ttl",
+									"value": "1999-04-20",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Palmerah Jakarta Barat",
+									"type": "text"
+								},
+								{
+									"key": "id_jabatan",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/jabatan/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"jabatan",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "List Department",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/department",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create  Department",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_dept",
+									"value": "Legal",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/department",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"department"
+							],
+							"query": [
+								{
+									"key": "nama_dept",
+									"value": "legal",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update  Department",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_dept",
+									"value": "Legal & Regulatory",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/department/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"department",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete  Department",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nik",
+									"value": "1122",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "Bambang",
+									"type": "text"
+								},
+								{
+									"key": "ttl",
+									"value": "1999-04-20",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Palmerah Jakarta Barat",
+									"type": "text"
+								},
+								{
+									"key": "id_jabatan",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/department/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"department",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Level",
+			"item": [
+				{
+					"name": "List Level",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/level",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"level"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create  Level",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_level",
+									"value": "Non Managerial",
+									"type": "text"
+								},
+								{
+									"key": "id_dept",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/level",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"level"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update  Level",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_level",
+									"value": "Low Level Managerial",
+									"type": "text"
+								},
+								{
+									"key": "id_dept",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/level/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"level",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete  Level",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nik",
+									"value": "1122",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "Bambang",
+									"type": "text"
+								},
+								{
+									"key": "ttl",
+									"value": "1999-04-20",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Palmerah Jakarta Barat",
+									"type": "text"
+								},
+								{
+									"key": "id_jabatan",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/level/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"level",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Segitiga",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "angka",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "tipe",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/segitiga",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"segitiga"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Terbilang",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nominal",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "tipe",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/terbilang",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"terbilang"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
