@@ -7,7 +7,7 @@ CREATE TABLE karyawan(
     id_jabatan INT(11),
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-)
+);
 
 CREATE TABLE jabatan(
     id_jabatan INT(11) AUTO_INCREMENT PRIMARY KEY,
@@ -15,7 +15,7 @@ CREATE TABLE jabatan(
     id_level INT(11),
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	
-)
+);
 
 CREATE TABLE level(
    id_level INT(11) AUTO_INCREMENT PRIMARY KEY,
@@ -23,14 +23,14 @@ CREATE TABLE level(
    id_dept INT(11),
    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	
-)
+);
 
 CREATE TABLE department(
    id_dept INT(11) AUTO_INCREMENT PRIMARY KEY,
    nama_dept VARCHAR(100),
    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	
-)
+);
 
 INSERT INTO karyawan(id_karyawan, nik, nama, ttl,alamat,id_jabatan) VALUES (NULL, '123', 'Dimas', '1994-09-02', 'Cawang Jakarta Timur', 1 );
 INSERT INTO karyawan(id_karyawan, nik, nama, ttl,alamat,id_jabatan) VALUES (NULL, '456', 'Justin', '2000-01-05', 'Tebet Jakarta Selatan', 2 );
@@ -52,7 +52,7 @@ INSERT INTO department(id_dept, nama_dept) VALUES (NULL, 'HR & GA');
 SELECT karyawan.nama, jabatan.nama_jabatan, level.nama_level, department.nama_dept FROM karyawan 
 LEFT JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan
 LEFT JOIN level ON jabatan.id_level = level.id_level
-LEFT JOIN department on level.id_dept = department.id_dept
+LEFT JOIN department on level.id_dept = department.id_dept;
 
 UPDATE karyawan SET nama = "david" WHERE id_karyawan = 1 ;
 
