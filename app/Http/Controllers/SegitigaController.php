@@ -10,35 +10,38 @@ class SegitigaController extends Controller
     public function index(request $request){
         $star=$request->angka;
         $tipe=$request->tipe;
-        
+        $html = '';
+
         if($tipe == 1) {
             for($a=$star;$a>0;$a--){
                 for($b=$star;$b>=$a;$b--){
-                    echo "*";
+                    $html .= "*";
                 }
-                echo "<br>";
+                $html .= "<br>";
                 }
         } else if($tipe == 2){
             for($a=1; $a<=$star; $a++){
                 for($i=1; $i<=$a; $i++){
-                    echo " &nbsp";
+                    $html .= " &nbsp";
                 }
                 for($c=$star; $c>=$a; $c-=1){
-                    echo "*";
+                    $html .= "*";
                 }
-                echo "<br>";
+                $html .= "<br>";
             }
         } else {
             for( $a=$star;$a>0;$a--){
                 for($i=1; $i<=$a; $i++){
-                    echo "&nbsp";
+                    $html .= "&nbsp";
                 }
                 for($a1=$star;$a1>=$a;$a1--){
-                    echo"*";
+                    $html .= "*";
                 }
-                echo"<br>";
+                $html .= "<br>";
                 }
         }
+
+        return response($html,200)->header('Content-Type','text/html');
     }
 
 }
