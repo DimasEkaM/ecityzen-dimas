@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\SegitigaRequest;
 
 class SegitigaController extends Controller
 {
 
-    public function index(request $request){
+    public function index(SegitigaRequest $request){
         $star=$request->angka;
         $tipe=$request->tipe;
         $html = '';

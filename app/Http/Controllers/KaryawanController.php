@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Karyawan;
+use App\Http\Requests\KaryawanRequest;
 
 class KaryawanController extends Controller
 {
@@ -11,7 +12,7 @@ class KaryawanController extends Controller
         return Karyawan::all();
     }
 
-    public function create(request $request){
+    public function create(KaryawanRequest $request){
         $karyawan = new Karyawan;
         $karyawan->nik          = $request->nik;
         $karyawan->nama         = $request->nama;
@@ -19,8 +20,7 @@ class KaryawanController extends Controller
         $karyawan->alamat       = $request->alamat;
         $karyawan->id_jabatan   = $request->id_jabatan;
         $karyawan->save();
-
-        return "Data succesfully created";
+        return response()->json(['success' => true , 'message' => 'Data succesfully created' ]);
     }
 
     public function update(request $request, $id){
@@ -31,14 +31,12 @@ class KaryawanController extends Controller
         $karyawan->alamat       = $request->alamat;
         $karyawan->id_jabatan   = $request->id_jabatan;
         $karyawan->save();
-
-        return "Data succesfully updated";
+        return response()->json(['success' => true , 'message' => 'Data succesfully updated' ]);
     }
 
     public function delete($id){
         $karyawan = Karyawan::find($id);
         $karyawan->delete();
-
-        return "Data succesfully deleted";
+        return response()->json(['success' => true , 'message' => 'Data succesfully deleted' ]);
     }
 }

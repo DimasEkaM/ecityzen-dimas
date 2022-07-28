@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Department;
+use App\Http\Requests\DepartmentRequest;
 
 class DepartmentController extends Controller
 {
@@ -11,26 +12,23 @@ class DepartmentController extends Controller
         return Department::all();
     }
 
-    public function create(request $request){
+    public function create(DepartmentRequest $request){
         $department = new Department;
         $department->nama_dept  = $request->nama_dept;
         $department->save();
-
-        return "Data succesfully created";
+        return response()->json(['success' => true , 'message' => 'Data succesfully created' ]);
     }
 
-    public function update(request $request, $id){
+    public function update(DepartmentRequest $request, $id){
         $department = Department::find($id);
         $department->nama_dept  = $request->nama_dept;
         $department->save();
-
-        return "Data succesfully updated";
+        return response()->json(['success' => true , 'message' => 'Data succesfully updated' ]);
     }
 
     public function delete($id){
         $department = Department::find($id);
         $department->delete();
-
-        return "Data succesfully deleted";
+        return response()->json(['success' => true , 'message' => 'Data succesfully deleted' ]);
     }
 }

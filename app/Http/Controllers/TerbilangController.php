@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\TerbilangRequest;
 
 class TerbilangController extends Controller
 {
-    public function index(request $request){
+    public function index(TerbilangRequest $request){
 
         $validasi = $this->validate($request,[
             'nominal' => 'required|numeric'

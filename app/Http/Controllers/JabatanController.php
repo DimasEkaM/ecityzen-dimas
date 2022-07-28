@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Jabatan;
+use App\Http\Requests\JabatanRequest;
 
 class JabatanController extends Controller
 {
@@ -11,28 +12,25 @@ class JabatanController extends Controller
         return Jabatan::all();
     }
 
-    public function create(request $request){
+    public function create(JabatanRequest $request){
         $jabatan = new Jabatan;
         $jabatan->nama_jabatan  = $request->nama_jabatan;
         $jabatan->id_level      = $request->id_level;
         $jabatan->save();
-
-        return "Data succesfully created";
+        return response()->json(['success' => true , 'message' => 'Data succesfully created' ]);
     }
 
-    public function update(request $request, $id){
+    public function update(JabatanRequest $request, $id){
         $jabatan = Jabatan::find($id);
         $jabatan->nama_jabatan  = $request->nama_jabatan;
         $jabatan->id_level      = $request->id_level;
         $jabatan->save();
-
-        return "Data succesfully updated";
+        return response()->json(['success' => true , 'message' => 'Data succesfully updated' ]);
     }
 
     public function delete($id){
         $jabatan = Jabatan::find($id);
         $jabatan->delete();
-
-        return "Data succesfully deleted";
+        return response()->json(['success' => true , 'message' => 'Data succesfully deleted' ]);
     }
 }
