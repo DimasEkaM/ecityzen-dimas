@@ -40,9 +40,9 @@ INSERT INTO jabatan(id_jabatan, nama_jabatan, id_level) VALUES (NULL, 'CTO', 1);
 INSERT INTO jabatan(id_jabatan, nama_jabatan, id_level) VALUES (NULL, 'Developer Manager', 2);
 INSERT INTO jabatan(id_jabatan, nama_jabatan, id_level) VALUES (NULL, 'Supervisor', 3);
 
-INSERT INTO level(id_level, nama_level) VALUES (NULL, 'Top Management');
-INSERT INTO level(id_level, nama_level) VALUES (NULL, 'Middle Management');
-INSERT INTO level(id_level, nama_level) VALUES (NULL, 'First Line Management');
+INSERT INTO level(id_level, nama_level, id_dept) VALUES (NULL, 'Top Management',1);
+INSERT INTO level(id_level, nama_level, id_dept) VALUES (NULL, 'Middle Management',2);
+INSERT INTO level(id_level, nama_level, id_dept) VALUES (NULL, 'First Line Management',3);
 
 INSERT INTO department(id_dept, nama_dept) VALUES (NULL, 'Technology');
 INSERT INTO department(id_dept, nama_dept) VALUES (NULL, 'Accounting & Finance');
